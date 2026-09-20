@@ -71,11 +71,33 @@ export default function FormFields({ formData, handleChange, styles }) {
       <div style={styles.row}>
         <div style={styles.inputGroup}>
           <label style={styles.label}>મેન્ટેનન્સ રકમ (અંકમાં)</label>
-          <input type="text" name="maintenanceAmountDigits" value={formData.maintenanceAmountDigits} onChange={handleChange} required style={styles.input} />
+          <select
+            name="maintenanceAmountDigits"
+            value={formData.maintenanceAmountDigits}
+            onChange={handleChange}
+            required
+            style={styles.input}
+          >
+            <option value="">પસંદ કરો (Select)</option>
+            <option value="50000">50,000</option>
+            <option value="100000">1,00,000</option>
+            <option value="125000">1,25,000</option>
+          </select>
         </div>
         <div style={styles.inputGroup}>
           <label style={styles.label}>મેન્ટેનન્સ રકમ (શબ્દોમાં)</label>
-          <input type="text" name="maintenanceAmountWords" value={formData.maintenanceAmountWords} onChange={handleChange} required style={styles.input} />
+          <select
+            name="maintenanceAmountWords"
+            value={formData.maintenanceAmountWords}
+            onChange={handleChange}
+            required
+            style={styles.input}
+          >
+            <option value="">પસંદ કરો (Select)</option>
+            <option value="પચાસ હજાર પૂરા">પચાસ હજાર પૂરા</option>
+            <option value="એક લાખ પૂરા">એક લાખ પૂરા</option>
+            <option value="એક લાખ પચ્ચીસ હજાર પૂરા">એક લાખ પચ્ચીસ હજાર પૂરા</option>
+          </select>
         </div>
       </div>
 
